@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "qFYbU/vr9mE=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\aespi\\source\\repos\\AdminRecursos\\AdminRecursos\\AdminRecursos.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aespi\\.nuget\\packages\\system.codedom\\9.0.3\\system.codedom.9.0.3.nupkg.sha512",
+    "C:\\Users\\aespi\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.3\\system.configuration.configurationmanager.9.0.3.nupkg.sha512",
+    "C:\\Users\\aespi\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.3\\system.diagnostics.eventlog.9.0.3.nupkg.sha512",
+    "C:\\Users\\aespi\\.nuget\\packages\\system.diagnostics.performancecounter\\9.0.3\\system.diagnostics.performancecounter.9.0.3.nupkg.sha512",
+    "C:\\Users\\aespi\\.nuget\\packages\\system.management\\9.0.3\\system.management.9.0.3.nupkg.sha512",
+    "C:\\Users\\aespi\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.3\\system.security.cryptography.protecteddata.9.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

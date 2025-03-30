@@ -48,7 +48,7 @@ class MonitorLatencia
         }
     }
 
-    private static long ObtenerLatenciaPing(string host)
+    public static long ObtenerLatenciaPing(string host)
     {
         try
         {

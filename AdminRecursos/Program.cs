@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdminRecursos;
+using System;
 using System.Diagnostics;
 using System.Threading;
 
@@ -16,7 +17,7 @@ class ResourceMonitor
 
     static PerformanceCounter bandwidthReceivedCounter = new PerformanceCounter(
         "Network Interface", "Bytes Received/sec", GetNetworkInterface());
-    //TODO: Temperatura se CPU,  Temperatura Ambiente
+   
     static string GetNetworkInterface()
     {
         foreach (var category in new PerformanceCounterCategory("Network Interface").GetInstanceNames())
@@ -32,7 +33,8 @@ class ResourceMonitor
         Console.Clear();
     }
 
-    static void DrawGraph(float cpuPercent, float ramPercent, float diskPercent, float bandwidthMbps)
+    static async Task DrawGraph(float cpuPercent, float ramPercent, float diskPercent,
+        float bandwidthMbps, long latency, float cpuTemperature)
     {
         const int maxValue = 100000;
         const int barLength = 20;
@@ -41,6 +43,7 @@ class ResourceMonitor
         string ramBar = new string('#', (int)((ramPercent / 100) * barLength));
         string diskBar = new string('#', (int)((diskPercent / 100) * barLength));
         string bandwidthBar = new string('#', (int)((bandwidthMbps / maxValue) * barLength)).PadRight(barLength, '-');
+        string latencyBar = new string('#', (int)(latency / 10)).PadRight(barLength, '-');
 
         cpuBar = cpuBar.PadRight(barLength, '-');
         ramBar = ramBar.PadRight(barLength, '-');
@@ -50,7 +53,26 @@ class ResourceMonitor
         Console.WriteLine($"RAM: [{ramBar}] {ramPercent:F1}%");
         Console.WriteLine($"Disk: [{diskBar}] {diskPercent:F1}%");
         Console.WriteLine($"Bandwidth: [{bandwidthBar}] {bandwidthMbps:F1} Kbps");
+        Console.WriteLine($"Latency: [{latencyBar}] {latency} ms");
+        Console.WriteLine($"CPU Temperature: {cpuTemperature:F1}°C");
 
+        LocationInfo location = await InfoUbicacion.getLocationAsync();
+
+        if (location != null)
+        {
+            
+            Console.WriteLine("------------------------------------------------------");
+            Console.WriteLine("*************Datos De Ubicación*************");
+            Console.WriteLine($"País: {location.country}");
+            Console.WriteLine($"Ciudad: {location.city}");
+            Console.WriteLine($"Región: {location.region}");
+            Console.WriteLine($"IP Pública: {location.ip}");
+            Console.WriteLine($"Código Postal: {location.postal}");
+        }
+        else
+        {
+            Console.WriteLine("❌ No se pudo obtener la ubicación.");
+        }
     }
 
     static void MonitorResources()
@@ -65,21 +87,23 @@ class ResourceMonitor
             float bandwidthSent = bandwidthSentCounter.NextValue();
             float bandwidthReceived = bandwidthReceivedCounter.NextValue();
             float bandwidthMbps = (bandwidthSent + bandwidthReceived) * 8 / 1000;
+            long latency = MonitorLatencia.ObtenerLatenciaPing("google.com");
+            float cpuTemperature = TempInterna.getCpuTemperature();
 
 
-            DrawGraph(cpu, ram, disk, bandwidthMbps);
+            DrawGraph(cpu, ram, disk, bandwidthMbps, latency, cpuTemperature);
 
-            if (cpu > 80 || ram > 80 || bandwidthMbps > 8000)
+            if (cpu > 80 || ram > 80 || bandwidthMbps > 8000 || latency > 150)
             {
-                Console.WriteLine("ALERTA: Uso excesivo de recursos");
+                Console.WriteLine("CRITICO: Uso excesivo de recursos o alta latencia");
             }
-            else if (cpu >= 75 || ram > 75 || bandwidthMbps > 75000 )
+            else if (cpu >= 75 || ram > 75 || bandwidthMbps > 75000 || latency > 100)
             {
-                Console.WriteLine("ALERTA: Se debe monitorear recursos");
+                Console.WriteLine("ALERTA: Se debe monitorear recursos y latencia");
             }
             else
             {
-                Console.WriteLine("ALERTA: Salud estable de memoria ram y procesador");
+                Console.WriteLine("INFO: Salud estable de memoria, procesador y conexión");
             }
 
             Thread.Sleep(2000);

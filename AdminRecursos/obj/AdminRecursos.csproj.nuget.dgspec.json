@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aespi\\source\\repos\\AdminRecursos\\AdminRecursos\\AdminRecursos.csproj": {}
+    "C:\\Users\\J Connors\\Documents\\Repositorios Privados\\aiep-backend\\Administrador_de_recursos\\AdminRecursos\\AdminRecursos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aespi\\source\\repos\\AdminRecursos\\AdminRecursos\\AdminRecursos.csproj": {
+    "C:\\Users\\J Connors\\Documents\\Repositorios Privados\\aiep-backend\\Administrador_de_recursos\\AdminRecursos\\AdminRecursos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aespi\\source\\repos\\AdminRecursos\\AdminRecursos\\AdminRecursos.csproj",
+        "projectUniqueName": "C:\\Users\\J Connors\\Documents\\Repositorios Privados\\aiep-backend\\Administrador_de_recursos\\AdminRecursos\\AdminRecursos.csproj",
         "projectName": "AdminRecursos",
-        "projectPath": "C:\\Users\\aespi\\source\\repos\\AdminRecursos\\AdminRecursos\\AdminRecursos.csproj",
-        "packagesPath": "C:\\Users\\aespi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aespi\\source\\repos\\AdminRecursos\\AdminRecursos\\obj\\",
+        "projectPath": "C:\\Users\\J Connors\\Documents\\Repositorios Privados\\aiep-backend\\Administrador_de_recursos\\AdminRecursos\\AdminRecursos.csproj",
+        "packagesPath": "C:\\Users\\J Connors\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\J Connors\\Documents\\Repositorios Privados\\aiep-backend\\Administrador_de_recursos\\AdminRecursos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\aespi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\J Connors\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -42,17 +42,21 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
+          "auditMode": "all"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "LibreHardwareMonitorLib": {
+              "target": "Package",
+              "version": "[0.9.4, )"
+            },
             "System.Diagnostics.PerformanceCounter": {
               "target": "Package",
-              "version": "[9.0.3, )"
+              "version": "[7.0.0, )"
             },
             "System.Management": {
               "target": "Package",
@@ -75,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200-preview.0.25057.12/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

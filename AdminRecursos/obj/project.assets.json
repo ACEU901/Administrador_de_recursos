@@ -326,23 +326,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aespi\\.nuget\\packages\\": {},
+    "C:\\Users\\diego\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aespi\\source\\repos\\AdminRecursos\\AdminRecursos\\AdminRecursos.csproj",
+      "projectUniqueName": "C:\\Users\\diego\\Documents\\GitHub\\Administrador_de_recursos\\AdminRecursos\\AdminRecursos.csproj",
       "projectName": "AdminRecursos",
-      "projectPath": "C:\\Users\\aespi\\source\\repos\\AdminRecursos\\AdminRecursos\\AdminRecursos.csproj",
-      "packagesPath": "C:\\Users\\aespi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aespi\\source\\repos\\AdminRecursos\\AdminRecursos\\obj\\",
+      "projectPath": "C:\\Users\\diego\\Documents\\GitHub\\Administrador_de_recursos\\AdminRecursos\\AdminRecursos.csproj",
+      "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\diego\\Documents\\GitHub\\Administrador_de_recursos\\AdminRecursos\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\aespi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -351,6 +351,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -368,8 +369,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.200"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -400,7 +400,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200-preview.0.25057.12/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

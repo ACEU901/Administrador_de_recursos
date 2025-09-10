@@ -9,8 +9,7 @@
       "AdminRecursos/1.0.0": {
         "dependencies": {
           "System.Diagnostics.PerformanceCounter": "9.0.3",
-          "System.Management": "9.0.3",
-          "OpenHardwareMonitorLib": "0.9.6.0"
+          "System.Management": "9.0.3"
         },
         "runtime": {
           "AdminRecursos.dll": {}
@@ -103,14 +102,6 @@
             "fileVersion": "9.0.325.11113"
           }
         }
-      },
-      "OpenHardwareMonitorLib/0.9.6.0": {
-        "runtime": {
-          "OpenHardwareMonitorLib.dll": {
-            "assemblyVersion": "0.9.6.0",
-            "fileVersion": "0.9.6.0"
-          }
-        }
       }
     }
   },
@@ -161,11 +152,6 @@
       "sha512": "sha512-4PAwR9l3rhAESfymptisnO2KWpHmiTnKxovnREqmiY4BEakXD2ahQU4/NO0vzEarMw8RGzwpmWoiHwvL/waHfQ==",
       "path": "system.security.cryptography.protecteddata/9.0.3",
       "hashPath": "system.security.cryptography.protecteddata.9.0.3.nupkg.sha512"
-    },
-    "OpenHardwareMonitorLib/0.9.6.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }
